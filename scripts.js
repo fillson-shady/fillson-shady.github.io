@@ -2,7 +2,7 @@ $(function() {
     
     function getRate(base) {
         $.ajax({
-            url: "http://api.fixer.io/latest?base=" + base,
+            url: "http://api.fixer.io/latest?symbols=RUB&base=" + base,
             success: function(data) {
                 $("#" + base).html(data.rates.RUB);
             }
