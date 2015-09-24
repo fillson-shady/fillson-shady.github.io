@@ -1,6 +1,15 @@
 $(function() {
     
-    $("#euro").html("77.35");
-    $("#dollar").html("66.25");
+    function getRate(base) = {
+        $.ajax({
+            url: "http://api.fixer.io/latest?base=" + base,
+            success: function(data) {
+                $("#" + base).html(data.rates.RUB);
+            }
+        }
+    )};
+    
+    getRate("USD");
+    getRate("EUR");
     
 });
