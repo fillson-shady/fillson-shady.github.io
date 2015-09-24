@@ -13,5 +13,6 @@
             startTime()
         }, 500);
     }
-    startTime();
+    
+    document.addEventListener('DOMContentLoaded', startTime, false);
 })();
