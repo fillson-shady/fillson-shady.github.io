@@ -1,6 +1,6 @@
 $(function() {
     
-    function getRate(base) = {
+    function getRate(base) {
         $.ajax({
             url: "http://api.fixer.io/latest?base=" + base,
             success: function(data) {
